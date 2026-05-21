@@ -1,6 +1,8 @@
-<img width="1916" height="962" alt="image" src="https://github.com/user-attachments/assets/aaf9cf92-8977-42bf-9e9c-89cab43dd0f2" />
 
 #  Crypto Streaming Pipeline
+
+<img width="1916" height="962" alt="image" src="https://github.com/user-attachments/assets/aaf9cf92-8977-42bf-9e9c-89cab43dd0f2" />
+
 
 A real-time crypto analytics pipeline built using modern data engineering tools.
 
@@ -30,3 +32,27 @@ This project streams live market data, processes it with Spark, stores it in Pos
 - Airflow
 - dbt
 - Docker Compose
+
+
+## System Architecture
+
+<img width="1536" height="1024" alt="ChatGPT Image May 21, 2026, 09_23_03 PM" src="https://github.com/user-attachments/assets/b742da55-0477-4351-bbc5-b2934d343759" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
