@@ -1,0 +1,43 @@
+[2026-05-21T08:30:06.059+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-21T08:30:06.255+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_quality_checks.check_freshness scheduled__2026-05-21T08:15:00+00:00 [queued]>
+[2026-05-21T08:30:06.300+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_quality_checks.check_freshness scheduled__2026-05-21T08:15:00+00:00 [queued]>
+[2026-05-21T08:30:06.302+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-05-21T08:30:06.363+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_freshness> on 2026-05-21 08:15:00+00:00
+[2026-05-21T08:30:06.389+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'data_quality_checks', 'check_freshness', 'scheduled__2026-05-21T08:15:00+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/data_quality.py', '--cfg-path', '/tmp/tmpesj_az4e']
+[2026-05-21T08:30:06.397+0000] {standard_task_runner.py:91} INFO - Job 110: Subtask check_freshness
+[2026-05-21T08:30:06.402+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=174) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-21T08:30:06.404+0000] {standard_task_runner.py:63} INFO - Started process 175 to run task
+[2026-05-21T08:30:06.656+0000] {task_command.py:426} INFO - Running <TaskInstance: data_quality_checks.check_freshness scheduled__2026-05-21T08:15:00+00:00 [running]> on host 2030e1318c14
+[2026-05-21T08:30:07.077+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='data_quality_checks' AIRFLOW_CTX_TASK_ID='check_freshness' AIRFLOW_CTX_EXECUTION_DATE='2026-05-21T08:15:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-21T08:15:00+00:00'
+[2026-05-21T08:30:07.080+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-21T08:30:07.236+0000] {data_quality.py:27} WARNING - Stale data: BNB-USD last seen 0:16:07.198582 ago
+[2026-05-21T08:30:07.239+0000] {data_quality.py:27} WARNING - Stale data: BTC-USD last seen 0:16:07.198582 ago
+[2026-05-21T08:30:07.240+0000] {data_quality.py:27} WARNING - Stale data: ADA-USD last seen 0:16:07.198582 ago
+[2026-05-21T08:30:07.242+0000] {data_quality.py:27} WARNING - Stale data: SOL-USD last seen 0:16:07.198582 ago
+[2026-05-21T08:30:07.244+0000] {data_quality.py:27} WARNING - Stale data: ETH-USD last seen 0:16:07.198582 ago
+[2026-05-21T08:30:07.246+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-21T08:30:07.249+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/data_quality.py", line 28, in check_data_freshness
+    raise ValueError(f"Stale data detected: {stale}")
+ValueError: Stale data detected: [('BNB-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('BTC-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('ADA-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('SOL-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('ETH-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582))]
+[2026-05-21T08:30:07.313+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=data_quality_checks, task_id=check_freshness, run_id=scheduled__2026-05-21T08:15:00+00:00, execution_date=20260521T081500, start_date=20260521T083006, end_date=20260521T083007
+[2026-05-21T08:30:07.388+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 110 for task check_freshness (Stale data detected: [('BNB-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('BTC-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('ADA-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('SOL-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582)), ('ETH-USD', datetime.datetime(2026, 5, 21, 8, 14, tzinfo=datetime.timezone.utc), datetime.timedelta(seconds=967, microseconds=198582))]; 175)
+[2026-05-21T08:30:07.439+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-21T08:30:07.518+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-21T08:30:07.535+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

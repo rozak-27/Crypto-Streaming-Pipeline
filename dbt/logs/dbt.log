@@ -1,0 +1,1067 @@
+[0m11:54:19.065574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae72bd970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae7236270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae710a7b0>]}
+
+
+============================== 11:54:19.083351 | 65055091-e423-4868-8c52-e4dd7da2afec ==============================
+[0m11:54:19.083351 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m11:54:19.089166 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '.', 'log_path': '/opt/airflow/dbt/logs', 'cache_selected_only': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'empty': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'write_json': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager'}
+[0m11:54:20.133485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae72bc620>]}
+[0m11:54:20.470065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae8b73680>]}
+[0m11:54:20.478638 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m11:54:20.882457 [debug] [MainThread]: checksum: 857f5d12c831cce745547d09db6b24868f7e28bbd0852d0ce72945650fe7d20a, vars: {}, profile: crypto_pipeline, target: dev, version: 1.12.0b1
+[0m11:54:20.912663 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:54:20.917486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae5f398b0>]}
+[0m11:54:26.819122 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'crypto_ohlcv_1min' in package 'crypto_pipeline' (models/staging/sources.yml).
+Arguments to generic tests should be nested under the `arguments` property.
+[0m11:54:26.825136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae8ce60c0>]}
+[0m11:54:28.052031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae53eb8c0>]}
+[0m11:54:28.894964 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m11:54:28.953118 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m11:54:29.168180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae4bf4440>]}
+[0m11:54:29.186165 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 475 macros
+[0m11:54:29.201039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae41b4d40>]}
+[0m11:54:29.254201 [info ] [MainThread]: 
+[0m11:54:29.265091 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:54:29.271631 [info ] [MainThread]: 
+[0m11:54:29.278550 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:54:29.308354 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_db'
+[0m11:54:29.313598 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_db'
+[0m11:54:29.857646 [debug] [ThreadPool]: Using postgres connection "list_crypto_db"
+[0m11:54:29.860396 [debug] [ThreadPool]: Using postgres connection "list_crypto_db"
+[0m11:54:29.866782 [debug] [ThreadPool]: On list_crypto_db: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:54:29.871078 [debug] [ThreadPool]: On list_crypto_db: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:54:29.888986 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:54:29.875697 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:54:29.993041 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.103 seconds
+[0m11:54:29.995486 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.120 seconds
+[0m11:54:30.008538 [debug] [ThreadPool]: On list_crypto_db: Close
+[0m11:54:30.021562 [debug] [ThreadPool]: On list_crypto_db: Close
+[0m11:54:30.042960 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto_db, now create_crypto_db_public_marts)
+[0m11:54:30.045549 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto_db, now create_crypto_db_public_staging)
+[0m11:54:30.059307 [debug] [ThreadPool]: Creating schema "database: "crypto_db"
+schema: "public_marts"
+"
+[0m11:54:30.066707 [debug] [ThreadPool]: Creating schema "database: "crypto_db"
+schema: "public_staging"
+"
+[0m11:54:30.094011 [debug] [ThreadPool]: Using postgres connection "create_crypto_db_public_marts"
+[0m11:54:30.120469 [debug] [ThreadPool]: On create_crypto_db_public_marts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_db_public_marts"} */
+create schema if not exists "public_marts"
+[0m11:54:30.128601 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:54:30.113491 [debug] [ThreadPool]: Using postgres connection "create_crypto_db_public_staging"
+[0m11:54:30.140253 [debug] [ThreadPool]: On create_crypto_db_public_staging: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_db_public_staging"} */
+create schema if not exists "public_staging"
+[0m11:54:30.145494 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:54:30.179316 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.051 seconds
+[0m11:54:30.187815 [debug] [ThreadPool]: On create_crypto_db_public_marts: COMMIT
+[0m11:54:30.189556 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.044 seconds
+[0m11:54:30.192958 [debug] [ThreadPool]: Using postgres connection "create_crypto_db_public_marts"
+[0m11:54:30.200291 [debug] [ThreadPool]: On create_crypto_db_public_staging: COMMIT
+[0m11:54:30.205690 [debug] [ThreadPool]: On create_crypto_db_public_marts: COMMIT
+[0m11:54:30.211720 [debug] [ThreadPool]: Using postgres connection "create_crypto_db_public_staging"
+[0m11:54:30.223516 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m11:54:30.224939 [debug] [ThreadPool]: On create_crypto_db_public_staging: COMMIT
+[0m11:54:30.229267 [debug] [ThreadPool]: On create_crypto_db_public_marts: Close
+[0m11:54:30.238925 [debug] [ThreadPool]: SQL status: COMMIT in 0.004 seconds
+[0m11:54:30.245401 [debug] [ThreadPool]: On create_crypto_db_public_staging: Close
+[0m11:54:30.258760 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_crypto_db_public_staging, now list_crypto_db_public_marts)
+[0m11:54:30.261529 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_crypto_db_public_marts, now list_crypto_db_public_staging)
+[0m11:54:30.291297 [debug] [ThreadPool]: Using postgres connection "list_crypto_db_public_marts"
+[0m11:54:30.303827 [debug] [ThreadPool]: Using postgres connection "list_crypto_db_public_staging"
+[0m11:54:30.307560 [debug] [ThreadPool]: On list_crypto_db_public_marts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db_public_marts"} */
+select
+      'crypto_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'crypto_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'crypto_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m11:54:30.317548 [debug] [ThreadPool]: On list_crypto_db_public_staging: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db_public_staging"} */
+select
+      'crypto_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'crypto_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'crypto_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m11:54:30.327025 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:54:30.339066 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:54:30.496408 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.170 seconds
+[0m11:54:30.497651 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.159 seconds
+[0m11:54:30.504037 [debug] [ThreadPool]: On list_crypto_db_public_marts: ROLLBACK
+[0m11:54:30.510024 [debug] [ThreadPool]: On list_crypto_db_public_staging: ROLLBACK
+[0m11:54:30.514772 [debug] [ThreadPool]: On list_crypto_db_public_marts: Close
+[0m11:54:30.518830 [debug] [ThreadPool]: On list_crypto_db_public_staging: Close
+[0m11:54:30.543960 [debug] [MainThread]: Using postgres connection "master"
+[0m11:54:30.549124 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:54:30.554548 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:54:30.707771 [debug] [MainThread]: SQL status: SELECT 0 in 0.153 seconds
+[0m11:54:30.720649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae8ce61e0>]}
+[0m11:54:30.725922 [debug] [MainThread]: On master: ROLLBACK
+[0m11:54:30.733493 [debug] [MainThread]: On master: COMMIT
+[0m11:54:30.757347 [debug] [MainThread]: Using postgres connection "master"
+[0m11:54:30.761981 [debug] [MainThread]: On master: COMMIT
+[0m11:54:30.767853 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m11:54:30.772556 [debug] [MainThread]: On master: Close
+[0m11:54:30.809649 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_ohlcv
+[0m11:54:30.817031 [info ] [Thread-1 (]: 1 of 2 START sql view model public_staging.stg_ohlcv ........................... [RUN]
+[0m11:54:30.834439 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_crypto_db_public_staging, now model.crypto_pipeline.stg_ohlcv)
+[0m11:54:30.854961 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_ohlcv
+[0m11:54:30.930881 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_ohlcv"
+[0m11:54:31.121691 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_ohlcv
+[0m11:54:31.263076 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_ohlcv"
+[0m11:54:31.402307 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:54:31.408049 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_ohlcv"} */
+
+  create view "crypto_db"."public_staging"."stg_ohlcv__dbt_tmp"
+    
+    
+  as (
+    -- Staging model: raw ohlcv_1min → clean view
+-- Hanya rename dan cast, tidak ada business logic
+
+
+
+SELECT
+    time                          AS candle_time,
+    symbol,
+    open::NUMERIC(18,8)           AS open,
+    high::NUMERIC(18,8)           AS high,
+    low::NUMERIC(18,8)            AS low,
+    close::NUMERIC(18,8)          AS close,
+    volume::NUMERIC(18,8)         AS volume,
+    trade_count,
+    -- Derived columns
+    (high - low)                  AS candle_range,
+    (close - open)                AS candle_body,
+    CASE
+        WHEN open < close THEN 'bullish'
+        WHEN open > close THEN 'bearish'
+        ELSE 'doji'
+    END                           AS candle_type,
+    close / NULLIF(LAG(close) OVER (
+        PARTITION BY symbol ORDER BY time
+    ), 0) - 1                     AS pct_change
+
+FROM "crypto_db"."public"."ohlcv_1min"
+WHERE time >= NOW() - INTERVAL '7 days'  -- rolling window
+ORDER BY symbol, time
+  );
+[0m11:54:31.413377 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:54:31.613291 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.200 seconds
+[0m11:54:31.645710 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:54:31.658106 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_ohlcv"} */
+alter table "crypto_db"."public_staging"."stg_ohlcv__dbt_tmp" rename to "stg_ohlcv"
+[0m11:54:31.668852 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m11:54:31.724315 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: COMMIT
+[0m11:54:31.730015 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:54:31.743800 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: COMMIT
+[0m11:54:31.752330 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m11:54:31.785002 [debug] [Thread-1 (]: Applying DROP to: "crypto_db"."public_staging"."stg_ohlcv__dbt_backup"
+[0m11:54:31.807695 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:54:31.811870 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_ohlcv"} */
+drop view if exists "crypto_db"."public_staging"."stg_ohlcv__dbt_backup" cascade
+[0m11:54:31.823434 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.006 seconds
+[0m11:54:31.832766 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: Close
+[0m11:54:31.840595 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae9162750>]}
+[0m11:54:31.845420 [info ] [Thread-1 (]: 1 of 2 OK created sql view model public_staging.stg_ohlcv ...................... [[32mCREATE VIEW[0m in 1.00s]
+[0m11:54:31.851369 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_ohlcv
+[0m11:54:31.858668 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.mart_technical_indicators
+[0m11:54:31.866050 [info ] [Thread-3 (]: 2 of 2 START sql table model public_marts.mart_technical_indicators ............ [RUN]
+[0m11:54:31.872769 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.crypto_pipeline.mart_technical_indicators'
+[0m11:54:31.877977 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.mart_technical_indicators
+[0m11:54:31.896394 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.mart_technical_indicators"
+[0m11:54:31.988861 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.mart_technical_indicators
+[0m11:54:32.088883 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.mart_technical_indicators"
+[0m11:54:32.177403 [debug] [Thread-3 (]: Using postgres connection "model.crypto_pipeline.mart_technical_indicators"
+[0m11:54:32.185451 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_technical_indicators"} */
+
+  
+    
+
+  create  table "crypto_db"."public_marts"."mart_technical_indicators__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH base AS (
+    SELECT * FROM "crypto_db"."public_staging"."stg_ohlcv"
+),
+
+moving_averages AS (
+    SELECT
+        candle_time, symbol, open, high, low, close, volume,
+        candle_type, pct_change,
+
+        -- Simple Moving Average (SMA)
+        AVG(close) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 19 PRECEDING AND CURRENT ROW
+        ) AS sma_20,
+
+        AVG(close) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 49 PRECEDING AND CURRENT ROW
+        ) AS sma_50,
+
+        -- Bollinger Bands std
+        STDDEV(close) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 19 PRECEDING AND CURRENT ROW
+        ) AS std_20,
+
+        -- Rolling volume average
+        AVG(volume) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 19 PRECEDING AND CURRENT ROW
+        ) AS avg_volume_20
+
+    FROM base
+)
+
+SELECT
+    candle_time, symbol, open, high, low, close, volume,
+    candle_type, pct_change,
+    sma_20, sma_50,
+    -- Bollinger Bands
+    sma_20 + (2 * std_20) AS bb_upper,
+    sma_20                AS bb_middle,
+    sma_20 - (2 * std_20) AS bb_lower,
+    std_20,
+    -- Volume ratio (vs 20-period average)
+    volume / NULLIF(avg_volume_20, 0) AS volume_ratio,
+    -- Golden cross signal
+    CASE
+        WHEN sma_20 > sma_50 THEN 'bullish_cross'
+        WHEN sma_20 < sma_50 THEN 'bearish_cross'
+        ELSE 'neutral'
+    END AS ma_signal
+
+FROM moving_averages
+ORDER BY symbol, candle_time
+  );
+  
+[0m11:54:32.192500 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:54:32.387169 [debug] [Thread-3 (]: SQL status: SELECT 951 in 0.193 seconds
+[0m11:54:32.416785 [debug] [Thread-3 (]: Using postgres connection "model.crypto_pipeline.mart_technical_indicators"
+[0m11:54:32.430506 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_technical_indicators"} */
+alter table "crypto_db"."public_marts"."mart_technical_indicators__dbt_tmp" rename to "mart_technical_indicators"
+[0m11:54:32.445564 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m11:54:32.468677 [debug] [Thread-3 (]: Using postgres connection "model.crypto_pipeline.mart_technical_indicators"
+[0m11:54:32.473607 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_technical_indicators"} */
+
+        SELECT create_hypertable('"crypto_db"."public_marts"."mart_technical_indicators"', 'candle_time', if_not_exists => TRUE)
+      
+[0m11:54:32.492122 [debug] [Thread-3 (]: Postgres adapter: Postgres error: function create_hypertable(unknown, unknown, if_not_exists => boolean) does not exist
+LINE 3:         SELECT create_hypertable('"crypto_db"."public_marts"...
+                       ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+[0m11:54:32.504643 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: ROLLBACK
+[0m11:54:32.511395 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: Close
+[0m11:54:32.535151 [debug] [Thread-3 (]: Database Error in model mart_technical_indicators (models/marts/mart_technical_indicators.sql)
+  function create_hypertable(unknown, unknown, if_not_exists => boolean) does not exist
+  LINE 3:         SELECT create_hypertable('"crypto_db"."public_marts"...
+                         ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target/run/crypto_pipeline/models/marts/mart_technical_indicators.sql
+[0m11:54:32.540531 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '65055091-e423-4868-8c52-e4dd7da2afec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bade133f50>]}
+[0m11:54:32.545341 [error] [Thread-3 (]: 2 of 2 ERROR creating sql table model public_marts.mart_technical_indicators ... [[31mERROR[0m in 0.67s]
+[0m11:54:32.553333 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.mart_technical_indicators
+[0m11:54:32.559958 [debug] [Thread-7 (]: Marking all children of 'model.crypto_pipeline.mart_technical_indicators' to be skipped because of status 'error'.  Reason: Database Error in model mart_technical_indicators (models/marts/mart_technical_indicators.sql)
+  function create_hypertable(unknown, unknown, if_not_exists => boolean) does not exist
+  LINE 3:         SELECT create_hypertable('"crypto_db"."public_marts"...
+                         ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target/run/crypto_pipeline/models/marts/mart_technical_indicators.sql.
+[0m11:54:32.573671 [debug] [MainThread]: On master: COMMIT
+[0m11:54:32.578713 [debug] [MainThread]: Using postgres connection "master"
+[0m11:54:32.586544 [debug] [MainThread]: On master: COMMIT
+[0m11:54:32.591578 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:54:32.628640 [debug] [MainThread]: SQL status: COMMIT in 0.037 seconds
+[0m11:54:32.633479 [debug] [MainThread]: On master: Close
+[0m11:54:32.639734 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:54:32.643529 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_ohlcv' was properly closed.
+[0m11:54:32.647114 [debug] [MainThread]: Connection 'list_crypto_db_public_marts' was properly closed.
+[0m11:54:32.654315 [debug] [MainThread]: Connection 'model.crypto_pipeline.mart_technical_indicators' was properly closed.
+[0m11:54:32.658746 [info ] [MainThread]: 
+[0m11:54:32.664515 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 3.38 seconds (3.38s).
+[0m11:54:32.675914 [debug] [MainThread]: Command end result
+[0m11:54:32.876698 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m11:54:32.907397 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m11:54:32.954246 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m11:54:32.958797 [info ] [MainThread]: 
+[0m11:54:32.965280 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:54:32.978418 [info ] [MainThread]: 
+[0m11:54:32.987796 [error] [MainThread]: [[31mERROR[0m]: in model mart_technical_indicators (models/marts/mart_technical_indicators.sql)
+[0m11:54:32.994050 [error] [MainThread]:   Database Error in model mart_technical_indicators (models/marts/mart_technical_indicators.sql)
+  function create_hypertable(unknown, unknown, if_not_exists => boolean) does not exist
+  LINE 3:         SELECT create_hypertable('"crypto_db"."public_marts"...
+                         ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target/run/crypto_pipeline/models/marts/mart_technical_indicators.sql
+[0m11:54:33.007677 [info ] [MainThread]: 
+[0m11:54:33.022032 [info ] [MainThread]:   compiled code at target/compiled/crypto_pipeline/models/marts/mart_technical_indicators.sql
+[0m11:54:33.031573 [info ] [MainThread]: 
+[0m11:54:33.044536 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m11:54:33.058577 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:54:33.084230 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 14.367379, "process_in_blocks": "50688", "process_kernel_time": 2.220372, "process_mem_max_rss": "131672", "process_out_blocks": "1904", "process_user_time": 15.583124}
+[0m11:54:33.090911 [debug] [MainThread]: Command `dbt run` failed at 11:54:33.090326 after 14.38 seconds
+[0m11:54:33.095825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae715a1b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bae7987080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73bade206b40>]}
+[0m11:54:33.101418 [debug] [MainThread]: Flushing usage events
+[0m11:54:34.815623 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:58:23.940613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a7307388c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a7308ddc860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a73067f5400>]}
+
+
+============================== 11:58:23.959870 | a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787 ==============================
+[0m11:58:23.959870 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m11:58:23.964758 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'log_path': '/opt/airflow/dbt/logs', 'cache_selected_only': 'False', 'debug': 'False', 'version_check': 'True', 'no_print': 'None', 'empty': 'False', 'target_path': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --profiles-dir .', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'static_parser': 'True', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'write_json': 'True', 'warn_error': 'None', 'printer_width': '80'}
+[0m11:58:24.627369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a7306cc57f0>]}
+[0m11:58:24.830186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a730706fd40>]}
+[0m11:58:24.836841 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m11:58:25.092098 [debug] [MainThread]: checksum: 857f5d12c831cce745547d09db6b24868f7e28bbd0852d0ce72945650fe7d20a, vars: {}, profile: crypto_pipeline, target: dev, version: 1.12.0b1
+[0m11:58:25.893392 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:58:25.898789 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/mart_technical_indicators.sql
+[0m11:58:26.912629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a73047d41a0>]}
+[0m11:58:27.272772 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m11:58:27.294836 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m11:58:27.369046 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a730477cbf0>]}
+[0m11:58:27.373997 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 475 macros
+[0m11:58:27.379059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a7304768d40>]}
+[0m11:58:27.387536 [info ] [MainThread]: 
+[0m11:58:27.393587 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:58:27.402610 [info ] [MainThread]: 
+[0m11:58:27.411044 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:58:27.430666 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_db'
+[0m11:58:27.433325 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_db'
+[0m11:58:27.542680 [debug] [ThreadPool]: Using postgres connection "list_crypto_db"
+[0m11:58:27.543756 [debug] [ThreadPool]: Using postgres connection "list_crypto_db"
+[0m11:58:27.546323 [debug] [ThreadPool]: On list_crypto_db: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:58:27.550615 [debug] [ThreadPool]: On list_crypto_db: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:58:27.555042 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:58:27.559606 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:58:27.580614 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.026 seconds
+[0m11:58:27.583068 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.023 seconds
+[0m11:58:27.588019 [debug] [ThreadPool]: On list_crypto_db: Close
+[0m11:58:27.595524 [debug] [ThreadPool]: On list_crypto_db: Close
+[0m11:58:27.610456 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto_db, now list_crypto_db_public_marts)
+[0m11:58:27.613145 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto_db, now list_crypto_db_public_staging)
+[0m11:58:27.628038 [debug] [ThreadPool]: Using postgres connection "list_crypto_db_public_marts"
+[0m11:58:27.633707 [debug] [ThreadPool]: Using postgres connection "list_crypto_db_public_staging"
+[0m11:58:27.639102 [debug] [ThreadPool]: On list_crypto_db_public_marts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db_public_marts"} */
+select
+      'crypto_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'crypto_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_marts'
+    union all
+    select
+      'crypto_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_marts'
+  
+[0m11:58:27.642556 [debug] [ThreadPool]: On list_crypto_db_public_staging: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_db_public_staging"} */
+select
+      'crypto_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'crypto_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'crypto_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m11:58:27.645771 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:58:27.648728 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:58:27.675902 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.030 seconds
+[0m11:58:27.677661 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.029 seconds
+[0m11:58:27.683292 [debug] [ThreadPool]: On list_crypto_db_public_marts: ROLLBACK
+[0m11:58:27.692219 [debug] [ThreadPool]: On list_crypto_db_public_staging: ROLLBACK
+[0m11:58:27.696828 [debug] [ThreadPool]: On list_crypto_db_public_marts: Close
+[0m11:58:27.700759 [debug] [ThreadPool]: On list_crypto_db_public_staging: Close
+[0m11:58:27.723639 [debug] [MainThread]: Using postgres connection "master"
+[0m11:58:27.727578 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:58:27.731122 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:58:27.759563 [debug] [MainThread]: SQL status: SELECT 1 in 0.028 seconds
+[0m11:58:27.765638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a7304bb9160>]}
+[0m11:58:27.769078 [debug] [MainThread]: On master: ROLLBACK
+[0m11:58:27.774054 [debug] [MainThread]: On master: COMMIT
+[0m11:58:27.778404 [debug] [MainThread]: Using postgres connection "master"
+[0m11:58:27.782880 [debug] [MainThread]: On master: COMMIT
+[0m11:58:27.787417 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m11:58:27.790859 [debug] [MainThread]: On master: Close
+[0m11:58:27.805588 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_ohlcv
+[0m11:58:27.808929 [info ] [Thread-1 (]: 1 of 2 START sql view model public_staging.stg_ohlcv ........................... [RUN]
+[0m11:58:27.812620 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_crypto_db_public_staging, now model.crypto_pipeline.stg_ohlcv)
+[0m11:58:27.815933 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_ohlcv
+[0m11:58:27.840594 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_ohlcv"
+[0m11:58:27.871093 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_ohlcv
+[0m11:58:27.947306 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_ohlcv"
+[0m11:58:27.990844 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:58:27.996393 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_ohlcv"} */
+
+  create view "crypto_db"."public_staging"."stg_ohlcv__dbt_tmp"
+    
+    
+  as (
+    -- Staging model: raw ohlcv_1min → clean view
+-- Hanya rename dan cast, tidak ada business logic
+
+
+
+SELECT
+    time                          AS candle_time,
+    symbol,
+    open::NUMERIC(18,8)           AS open,
+    high::NUMERIC(18,8)           AS high,
+    low::NUMERIC(18,8)            AS low,
+    close::NUMERIC(18,8)          AS close,
+    volume::NUMERIC(18,8)         AS volume,
+    trade_count,
+    -- Derived columns
+    (high - low)                  AS candle_range,
+    (close - open)                AS candle_body,
+    CASE
+        WHEN open < close THEN 'bullish'
+        WHEN open > close THEN 'bearish'
+        ELSE 'doji'
+    END                           AS candle_type,
+    close / NULLIF(LAG(close) OVER (
+        PARTITION BY symbol ORDER BY time
+    ), 0) - 1                     AS pct_change
+
+FROM "crypto_db"."public"."ohlcv_1min"
+WHERE time >= NOW() - INTERVAL '7 days'  -- rolling window
+ORDER BY symbol, time
+  );
+[0m11:58:28.001354 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:28.207846 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.206 seconds
+[0m11:58:28.241802 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:58:28.248361 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_ohlcv"} */
+alter table "crypto_db"."public_staging"."stg_ohlcv" rename to "stg_ohlcv__dbt_backup"
+[0m11:58:28.268131 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m11:58:28.284838 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:58:28.303207 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_ohlcv"} */
+alter table "crypto_db"."public_staging"."stg_ohlcv__dbt_tmp" rename to "stg_ohlcv"
+[0m11:58:28.327703 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.010 seconds
+[0m11:58:28.433935 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: COMMIT
+[0m11:58:28.438425 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:58:28.444378 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: COMMIT
+[0m11:58:28.454077 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m11:58:28.484818 [debug] [Thread-1 (]: Applying DROP to: "crypto_db"."public_staging"."stg_ohlcv__dbt_backup"
+[0m11:58:28.512942 [debug] [Thread-1 (]: Using postgres connection "model.crypto_pipeline.stg_ohlcv"
+[0m11:58:28.517667 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_ohlcv"} */
+drop view if exists "crypto_db"."public_staging"."stg_ohlcv__dbt_backup" cascade
+[0m11:58:28.553313 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.032 seconds
+[0m11:58:28.563731 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_ohlcv: Close
+[0m11:58:28.571285 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a7308e36480>]}
+[0m11:58:28.576831 [info ] [Thread-1 (]: 1 of 2 OK created sql view model public_staging.stg_ohlcv ...................... [[32mCREATE VIEW[0m in 0.76s]
+[0m11:58:28.583445 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_ohlcv
+[0m11:58:28.591901 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.mart_technical_indicators
+[0m11:58:28.600902 [info ] [Thread-3 (]: 2 of 2 START sql table model public_marts.mart_technical_indicators ............ [RUN]
+[0m11:58:28.611467 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.crypto_pipeline.mart_technical_indicators'
+[0m11:58:28.618894 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.mart_technical_indicators
+[0m11:58:28.632528 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.mart_technical_indicators"
+[0m11:58:28.684417 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.mart_technical_indicators
+[0m11:58:28.734177 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.mart_technical_indicators"
+[0m11:58:28.778814 [debug] [Thread-3 (]: Using postgres connection "model.crypto_pipeline.mart_technical_indicators"
+[0m11:58:28.783407 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_technical_indicators"} */
+
+  
+    
+
+  create  table "crypto_db"."public_marts"."mart_technical_indicators__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH base AS (
+    SELECT * FROM "crypto_db"."public_staging"."stg_ohlcv"
+),
+
+moving_averages AS (
+    SELECT
+        candle_time, symbol, open, high, low, close, volume,
+        candle_type, pct_change,
+
+        -- Simple Moving Average (SMA)
+        AVG(close) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 19 PRECEDING AND CURRENT ROW
+        ) AS sma_20,
+
+        AVG(close) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 49 PRECEDING AND CURRENT ROW
+        ) AS sma_50,
+
+        -- Bollinger Bands std
+        STDDEV(close) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 19 PRECEDING AND CURRENT ROW
+        ) AS std_20,
+
+        -- Rolling volume average
+        AVG(volume) OVER (PARTITION BY symbol
+            ORDER BY candle_time
+            ROWS BETWEEN 19 PRECEDING AND CURRENT ROW
+        ) AS avg_volume_20
+
+    FROM base
+)
+
+SELECT
+    candle_time, symbol, open, high, low, close, volume,
+    candle_type, pct_change,
+    sma_20, sma_50,
+    -- Bollinger Bands
+    sma_20 + (2 * std_20) AS bb_upper,
+    sma_20                AS bb_middle,
+    sma_20 - (2 * std_20) AS bb_lower,
+    std_20,
+    -- Volume ratio (vs 20-period average)
+    volume / NULLIF(avg_volume_20, 0) AS volume_ratio,
+    -- Golden cross signal
+    CASE
+        WHEN sma_20 > sma_50 THEN 'bullish_cross'
+        WHEN sma_20 < sma_50 THEN 'bearish_cross'
+        ELSE 'neutral'
+    END AS ma_signal
+
+FROM moving_averages
+ORDER BY symbol, candle_time
+  );
+  
+[0m11:58:28.787750 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:58:28.872073 [debug] [Thread-3 (]: SQL status: SELECT 975 in 0.084 seconds
+[0m11:58:28.891547 [debug] [Thread-3 (]: Using postgres connection "model.crypto_pipeline.mart_technical_indicators"
+[0m11:58:28.896917 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_technical_indicators"} */
+alter table "crypto_db"."public_marts"."mart_technical_indicators__dbt_tmp" rename to "mart_technical_indicators"
+[0m11:58:28.901907 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:58:28.907492 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: COMMIT
+[0m11:58:28.910737 [debug] [Thread-3 (]: Using postgres connection "model.crypto_pipeline.mart_technical_indicators"
+[0m11:58:28.914558 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: COMMIT
+[0m11:58:28.920826 [debug] [Thread-3 (]: SQL status: COMMIT in 0.003 seconds
+[0m11:58:29.069161 [debug] [Thread-3 (]: Applying DROP to: "crypto_db"."public_marts"."mart_technical_indicators__dbt_backup"
+[0m11:58:29.078912 [debug] [Thread-3 (]: Using postgres connection "model.crypto_pipeline.mart_technical_indicators"
+[0m11:58:29.082861 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_technical_indicators"} */
+drop table if exists "crypto_db"."public_marts"."mart_technical_indicators__dbt_backup" cascade
+[0m11:58:29.088410 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:58:29.094406 [debug] [Thread-3 (]: On model.crypto_pipeline.mart_technical_indicators: Close
+[0m11:58:29.098477 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a63a1c64-1b0e-4c2a-84cd-9fdfa4d04787', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a7300728bf0>]}
+[0m11:58:29.106847 [info ] [Thread-3 (]: 2 of 2 OK created sql table model public_marts.mart_technical_indicators ....... [[32mSELECT 975[0m in 0.49s]
+[0m11:58:29.112274 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.mart_technical_indicators
+[0m11:58:29.123379 [debug] [MainThread]: On master: COMMIT
+[0m11:58:29.128168 [debug] [MainThread]: Using postgres connection "master"
+[0m11:58:29.132397 [debug] [MainThread]: On master: COMMIT
+[0m11:58:29.136450 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:58:29.151352 [debug] [MainThread]: SQL status: COMMIT in 0.015 seconds
+[0m11:58:29.154634 [debug] [MainThread]: On master: Close
+[0m11:58:29.159524 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:58:29.163058 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_ohlcv' was properly closed.
+[0m11:58:29.166852 [debug] [MainThread]: Connection 'list_crypto_db_public_marts' was properly closed.
+[0m11:58:29.170858 [debug] [MainThread]: Connection 'model.crypto_pipeline.mart_technical_indicators' was properly closed.
+[0m11:58:29.175288 [info ] [MainThread]: 
+[0m11:58:29.180379 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 1.76 seconds (1.76s).
+[0m11:58:29.187658 [debug] [MainThread]: Command end result
+[0m11:58:29.325570 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/target/manifest.json
+[0m11:58:29.345755 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/target/semantic_manifest.json
+[0m11:58:29.378691 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/target/run_results.json
+[0m11:58:29.382413 [info ] [MainThread]: 
+[0m11:58:29.387108 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:58:29.394480 [info ] [MainThread]: 
+[0m11:58:29.401691 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m11:58:29.412080 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.7841325, "process_in_blocks": "1992", "process_kernel_time": 1.086905, "process_mem_max_rss": "129212", "process_out_blocks": "0", "process_user_time": 8.715299}
+[0m11:58:29.416742 [debug] [MainThread]: Command `dbt run` succeeded at 11:58:29.415701 after 5.79 seconds
+[0m11:58:29.422510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a73067d0050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a730706fe00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a73071aafc0>]}
+[0m11:58:29.427062 [debug] [MainThread]: Flushing usage events
+[0m11:58:30.654389 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:50:25.058724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6deb56630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6dedb43e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6de80cd70>]}
+
+
+============================== 07:50:25.097036 | a039d193-d154-4afe-90a0-acda53cd46c9 ==============================
+[0m07:50:25.097036 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m07:50:25.107748 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_path': '/opt/airflow/dbt/logs', 'partial_parse': 'True', 'quiet': 'False', 'debug': 'False', 'log_cache_events': 'False', 'printer_width': '80', 'use_colors': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt', 'warn_error': 'None', 'log_format': 'default', 'introspect': 'True', 'profiles_dir': '/opt/airflow/dbt', 'empty': 'None', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True'}
+[0m07:50:25.260484 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m07:50:25.267015 [info ] [MainThread]: python version: 3.12.3
+[0m07:50:25.270515 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m07:50:25.285671 [info ] [MainThread]: os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m07:50:25.907721 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt
+[0m07:50:25.911686 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[0m07:50:25.918256 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m07:50:25.925265 [info ] [MainThread]: adapter type: postgres
+[0m07:50:25.940371 [info ] [MainThread]: adapter version: 1.10.0
+[0m07:50:26.364238 [info ] [MainThread]: Configuration:
+[0m07:50:26.368710 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m07:50:26.375131 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m07:50:26.380245 [info ] [MainThread]: Required dependencies:
+[0m07:50:26.385111 [debug] [MainThread]: Executing "git --help"
+[0m07:50:26.394157 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m07:50:26.401237 [info ] [MainThread]: Connection:
+[0m07:50:26.406032 [info ] [MainThread]:   host: postgres
+[0m07:50:26.411929 [info ] [MainThread]:   port: 5432
+[0m07:50:26.416331 [info ] [MainThread]:   user: pipeline_user
+[0m07:50:26.421051 [info ] [MainThread]:   database: crypto_db
+[0m07:50:26.426760 [info ] [MainThread]:   schema: public
+[0m07:50:26.432549 [info ] [MainThread]:   connect_timeout: 10
+[0m07:50:26.438183 [info ] [MainThread]:   role: None
+[0m07:50:26.442079 [info ] [MainThread]:   search_path: None
+[0m07:50:26.446254 [info ] [MainThread]:   keepalives_idle: 0
+[0m07:50:26.451972 [info ] [MainThread]:   sslmode: None
+[0m07:50:26.457798 [info ] [MainThread]:   sslcert: None
+[0m07:50:26.461785 [info ] [MainThread]:   sslkey: None
+[0m07:50:26.466327 [info ] [MainThread]:   sslrootcert: None
+[0m07:50:26.470705 [info ] [MainThread]:   application_name: dbt
+[0m07:50:26.478117 [info ] [MainThread]:   retries: 1
+[0m07:50:26.487651 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m07:50:26.802198 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m07:50:26.954353 [debug] [MainThread]: Using postgres connection "debug"
+[0m07:50:26.961378 [debug] [MainThread]: On debug: select 1 as id
+[0m07:50:26.965172 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:50:27.005976 [debug] [MainThread]: SQL status: SELECT 1 in 0.041 seconds
+[0m07:50:27.010819 [debug] [MainThread]: On debug: Close
+[0m07:50:27.014760 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m07:50:27.025328 [info ] [MainThread]: [31m1 check failed:[0m
+[0m07:50:27.030957 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m07:50:27.038860 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 2.666324, "process_in_blocks": "42720", "process_kernel_time": 1.906828, "process_mem_max_rss": "115292", "process_out_blocks": "0", "process_user_time": 7.765547}
+[0m07:50:27.044750 [debug] [MainThread]: Command `dbt debug` failed at 07:50:27.043804 after 2.67 seconds
+[0m07:50:27.048348 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m07:50:27.051895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6de37e1b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6dff7cd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6e2416f90>]}
+[0m07:50:27.056757 [debug] [MainThread]: Flushing usage events
+[0m07:50:28.383596 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:55:39.505260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751f4132ef60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751f40dbe930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751f412e7a70>]}
+
+
+============================== 07:55:39.521418 | e119b1a0-e19d-4284-b744-abf515532f69 ==============================
+[0m07:55:39.521418 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m07:55:39.525613 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt', 'printer_width': '80', 'cache_selected_only': 'False', 'write_json': 'True', 'no_print': 'None', 'debug': 'False', 'introspect': 'True', 'profiles_dir': '/opt/airflow/dbt', 'log_format': 'default', 'empty': 'None', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/logs', 'target_path': 'None', 'static_parser': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False'}
+[0m07:55:39.558891 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m07:55:39.562319 [info ] [MainThread]: python version: 3.12.3
+[0m07:55:39.566245 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m07:55:39.569985 [info ] [MainThread]: os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m07:55:39.886318 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt
+[0m07:55:39.890627 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[0m07:55:39.894834 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m07:55:39.899183 [info ] [MainThread]: adapter type: postgres
+[0m07:55:39.902971 [info ] [MainThread]: adapter version: 1.10.0
+[0m07:55:40.239634 [info ] [MainThread]: Configuration:
+[0m07:55:40.243761 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m07:55:40.247555 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m07:55:40.251492 [info ] [MainThread]: Required dependencies:
+[0m07:55:40.254891 [debug] [MainThread]: Executing "git --help"
+[0m07:55:40.260720 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m07:55:40.264207 [info ] [MainThread]: Connection:
+[0m07:55:40.268148 [info ] [MainThread]:   host: postgres
+[0m07:55:40.271536 [info ] [MainThread]:   port: 5432
+[0m07:55:40.277146 [info ] [MainThread]:   user: pipeline_user
+[0m07:55:40.280626 [info ] [MainThread]:   database: crypto_db
+[0m07:55:40.285183 [info ] [MainThread]:   schema: public
+[0m07:55:40.288991 [info ] [MainThread]:   connect_timeout: 10
+[0m07:55:40.295751 [info ] [MainThread]:   role: None
+[0m07:55:40.301561 [info ] [MainThread]:   search_path: None
+[0m07:55:40.306831 [info ] [MainThread]:   keepalives_idle: 0
+[0m07:55:40.310557 [info ] [MainThread]:   sslmode: None
+[0m07:55:40.314611 [info ] [MainThread]:   sslcert: None
+[0m07:55:40.318956 [info ] [MainThread]:   sslkey: None
+[0m07:55:40.323033 [info ] [MainThread]:   sslrootcert: None
+[0m07:55:40.327466 [info ] [MainThread]:   application_name: dbt
+[0m07:55:40.331672 [info ] [MainThread]:   retries: 1
+[0m07:55:40.336823 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m07:55:40.596859 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m07:55:40.717307 [debug] [MainThread]: Using postgres connection "debug"
+[0m07:55:40.720920 [debug] [MainThread]: On debug: select 1 as id
+[0m07:55:40.725304 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:55:40.750408 [debug] [MainThread]: SQL status: SELECT 1 in 0.025 seconds
+[0m07:55:40.755864 [debug] [MainThread]: On debug: Close
+[0m07:55:40.760382 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m07:55:40.765556 [info ] [MainThread]: [31m1 check failed:[0m
+[0m07:55:40.770078 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m07:55:40.776984 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.5272907, "process_in_blocks": "11624", "process_kernel_time": 1.130044, "process_mem_max_rss": "115368", "process_out_blocks": "0", "process_user_time": 6.09661}
+[0m07:55:40.785418 [debug] [MainThread]: Command `dbt debug` failed at 07:55:40.784775 after 1.54 seconds
+[0m07:55:40.789587 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m07:55:40.793863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751f410f9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751f3fb567e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751f40ea3f20>]}
+[0m07:55:40.797474 [debug] [MainThread]: Flushing usage events
+[0m07:55:42.103627 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:00:07.524758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752251ff63c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7522513c8bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752251d091c0>]}
+
+
+============================== 08:00:07.546161 | ad92eb8f-dadf-44ec-898d-3fa382c56bc0 ==============================
+[0m08:00:07.546161 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m08:00:07.556715 [debug] [MainThread]: running dbt with arguments {'log_path': '/opt/airflow/dbt/logs', 'introspect': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'empty': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'profiles_dir': '/opt/airflow/dbt', 'write_json': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'target_path': 'None', 'use_colors': 'True', 'no_print': 'None', 'fail_fast': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'printer_width': '80'}
+[0m08:00:07.596840 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m08:00:07.603221 [info ] [MainThread]: python version: 3.12.3
+[0m08:00:07.607825 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m08:00:07.611731 [info ] [MainThread]: os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m08:00:08.036514 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt
+[0m08:00:08.041453 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[0m08:00:08.046964 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m08:00:08.052804 [info ] [MainThread]: adapter type: postgres
+[0m08:00:08.057209 [info ] [MainThread]: adapter version: 1.10.0
+[0m08:00:08.536538 [info ] [MainThread]: Configuration:
+[0m08:00:08.542537 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:00:08.548795 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m08:00:08.555916 [info ] [MainThread]: Required dependencies:
+[0m08:00:08.561149 [debug] [MainThread]: Executing "git --help"
+[0m08:00:08.575678 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m08:00:08.582322 [info ] [MainThread]: Connection:
+[0m08:00:08.587316 [info ] [MainThread]:   host: postgres
+[0m08:00:08.596872 [info ] [MainThread]:   port: 5432
+[0m08:00:08.600767 [info ] [MainThread]:   user: pipeline_user
+[0m08:00:08.604110 [info ] [MainThread]:   database: crypto_db
+[0m08:00:08.609649 [info ] [MainThread]:   schema: public
+[0m08:00:08.614162 [info ] [MainThread]:   connect_timeout: 10
+[0m08:00:08.618757 [info ] [MainThread]:   role: None
+[0m08:00:08.623523 [info ] [MainThread]:   search_path: None
+[0m08:00:08.630942 [info ] [MainThread]:   keepalives_idle: 0
+[0m08:00:08.637528 [info ] [MainThread]:   sslmode: None
+[0m08:00:08.642093 [info ] [MainThread]:   sslcert: None
+[0m08:00:08.646817 [info ] [MainThread]:   sslkey: None
+[0m08:00:08.652091 [info ] [MainThread]:   sslrootcert: None
+[0m08:00:08.657296 [info ] [MainThread]:   application_name: dbt
+[0m08:00:08.671410 [info ] [MainThread]:   retries: 1
+[0m08:00:08.677865 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:00:08.973971 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m08:00:09.116011 [debug] [MainThread]: Using postgres connection "debug"
+[0m08:00:09.124326 [debug] [MainThread]: On debug: select 1 as id
+[0m08:00:09.128196 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:00:09.147329 [debug] [MainThread]: SQL status: SELECT 1 in 0.019 seconds
+[0m08:00:09.155493 [debug] [MainThread]: On debug: Close
+[0m08:00:09.159552 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:00:09.166344 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:00:09.170401 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m08:00:09.175917 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.9535961, "process_in_blocks": "1760", "process_kernel_time": 0.841794, "process_mem_max_rss": "115404", "process_out_blocks": "0", "process_user_time": 5.92049}
+[0m08:00:09.180393 [debug] [MainThread]: Command `dbt debug` failed at 08:00:09.179825 after 1.96 seconds
+[0m08:00:09.184996 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:00:09.192832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75225169d340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752251e09520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752254eb6f90>]}
+[0m08:00:09.197113 [debug] [MainThread]: Flushing usage events
+[0m08:00:10.623882 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:00:49.412137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x783dc5664b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x783dc37d7fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x783dc37d53a0>]}
+
+
+============================== 08:00:49.432039 | 59b250ae-b2ba-4fab-9c69-837ef50ae668 ==============================
+[0m08:00:49.432039 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m08:00:49.435645 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'cache_selected_only': 'False', 'log_path': '/opt/airflow/dbt/logs', 'partial_parse': 'True', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'debug': 'False', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'no_print': 'None', 'write_json': 'True', 'profiles_dir': '/opt/airflow/dbt', 'printer_width': '80', 'fail_fast': 'False', 'introspect': 'True', 'static_parser': 'True', 'version_check': 'True', 'empty': 'None', 'target_path': 'None', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m08:00:49.460096 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m08:00:49.463852 [info ] [MainThread]: python version: 3.12.3
+[0m08:00:49.467782 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m08:00:49.472290 [info ] [MainThread]: os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m08:00:49.714689 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt
+[0m08:00:49.718591 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[0m08:00:49.722068 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m08:00:49.727113 [info ] [MainThread]: adapter type: postgres
+[0m08:00:49.732425 [info ] [MainThread]: adapter version: 1.10.0
+[0m08:00:50.204027 [info ] [MainThread]: Configuration:
+[0m08:00:50.207182 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:00:50.210695 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m08:00:50.214237 [info ] [MainThread]: Required dependencies:
+[0m08:00:50.218173 [debug] [MainThread]: Executing "git --help"
+[0m08:00:50.223526 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m08:00:50.226800 [info ] [MainThread]: Connection:
+[0m08:00:50.231103 [info ] [MainThread]:   host: postgres
+[0m08:00:50.236250 [info ] [MainThread]:   port: 5432
+[0m08:00:50.240698 [info ] [MainThread]:   user: pipeline_user
+[0m08:00:50.243393 [info ] [MainThread]:   database: crypto_db
+[0m08:00:50.246776 [info ] [MainThread]:   schema: public
+[0m08:00:50.250584 [info ] [MainThread]:   connect_timeout: 10
+[0m08:00:50.254037 [info ] [MainThread]:   role: None
+[0m08:00:50.257919 [info ] [MainThread]:   search_path: None
+[0m08:00:50.261619 [info ] [MainThread]:   keepalives_idle: 0
+[0m08:00:50.264504 [info ] [MainThread]:   sslmode: None
+[0m08:00:50.268217 [info ] [MainThread]:   sslcert: None
+[0m08:00:50.272072 [info ] [MainThread]:   sslkey: None
+[0m08:00:50.275603 [info ] [MainThread]:   sslrootcert: None
+[0m08:00:50.279750 [info ] [MainThread]:   application_name: dbt
+[0m08:00:50.283070 [info ] [MainThread]:   retries: 1
+[0m08:00:50.286706 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:00:50.492440 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m08:00:50.551414 [debug] [MainThread]: Using postgres connection "debug"
+[0m08:00:50.554917 [debug] [MainThread]: On debug: select 1 as id
+[0m08:00:50.558196 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:00:50.590813 [debug] [MainThread]: SQL status: SELECT 1 in 0.033 seconds
+[0m08:00:50.594707 [debug] [MainThread]: On debug: Close
+[0m08:00:50.598205 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:00:50.602792 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:00:50.606073 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m08:00:50.610885 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.426766, "process_in_blocks": "0", "process_kernel_time": 0.753396, "process_mem_max_rss": "115460", "process_out_blocks": "0", "process_user_time": 4.862831}
+[0m08:00:50.614570 [debug] [MainThread]: Command `dbt debug` failed at 08:00:50.614255 after 1.43 seconds
+[0m08:00:50.618329 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:00:50.622115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x783dc30be9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x783dc3f42870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x783dc444da90>]}
+[0m08:00:50.625719 [debug] [MainThread]: Flushing usage events
+[0m08:00:51.883955 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:05:22.673943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2baa8c1130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2baa3bf260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2baa8c2630>]}
+
+
+============================== 08:05:22.702857 | 8745db65-a8c5-460a-aaa5-202202eb82f9 ==============================
+[0m08:05:22.702857 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m08:05:22.709698 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'log_path': '/opt/airflow/dbt/logs', 'fail_fast': 'False', 'log_format': 'default', 'quiet': 'False', 'no_print': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt', 'use_colors': 'True', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'empty': 'None', 'use_experimental_parser': 'False', 'warn_error': 'None', 'debug': 'False', 'printer_width': '80', 'profiles_dir': '/opt/airflow/dbt'}
+[0m08:05:22.752989 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m08:05:22.759040 [info ] [MainThread]: python version: 3.12.3
+[0m08:05:22.764260 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m08:05:22.768841 [info ] [MainThread]: os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m08:05:23.178962 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt
+[0m08:05:23.183112 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[0m08:05:23.188323 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m08:05:23.193713 [info ] [MainThread]: adapter type: postgres
+[0m08:05:23.203075 [info ] [MainThread]: adapter version: 1.10.0
+[0m08:05:23.565542 [info ] [MainThread]: Configuration:
+[0m08:05:23.570247 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:05:23.575659 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m08:05:23.580506 [info ] [MainThread]: Required dependencies:
+[0m08:05:23.586152 [debug] [MainThread]: Executing "git --help"
+[0m08:05:23.597629 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m08:05:23.601791 [info ] [MainThread]: Connection:
+[0m08:05:23.605926 [info ] [MainThread]:   host: postgres
+[0m08:05:23.613868 [info ] [MainThread]:   port: 5432
+[0m08:05:23.617611 [info ] [MainThread]:   user: pipeline_user
+[0m08:05:23.622416 [info ] [MainThread]:   database: crypto_db
+[0m08:05:23.626794 [info ] [MainThread]:   schema: public
+[0m08:05:23.631168 [info ] [MainThread]:   connect_timeout: 10
+[0m08:05:23.635976 [info ] [MainThread]:   role: None
+[0m08:05:23.639750 [info ] [MainThread]:   search_path: None
+[0m08:05:23.643010 [info ] [MainThread]:   keepalives_idle: 0
+[0m08:05:23.646713 [info ] [MainThread]:   sslmode: None
+[0m08:05:23.652595 [info ] [MainThread]:   sslcert: None
+[0m08:05:23.657509 [info ] [MainThread]:   sslkey: None
+[0m08:05:23.661004 [info ] [MainThread]:   sslrootcert: None
+[0m08:05:23.665144 [info ] [MainThread]:   application_name: dbt
+[0m08:05:23.670754 [info ] [MainThread]:   retries: 1
+[0m08:05:23.675588 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:05:23.915981 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m08:05:24.002340 [debug] [MainThread]: Using postgres connection "debug"
+[0m08:05:24.005934 [debug] [MainThread]: On debug: select 1 as id
+[0m08:05:24.009123 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:05:24.035585 [debug] [MainThread]: SQL status: SELECT 1 in 0.026 seconds
+[0m08:05:24.042023 [debug] [MainThread]: On debug: Close
+[0m08:05:24.046543 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:05:24.053340 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:05:24.057640 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m08:05:24.066069 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.7772912, "process_in_blocks": "0", "process_kernel_time": 1.589563, "process_mem_max_rss": "115388", "process_out_blocks": "0", "process_user_time": 7.385604}
+[0m08:05:24.071276 [debug] [MainThread]: Command `dbt debug` failed at 08:05:24.070244 after 1.78 seconds
+[0m08:05:24.075440 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:05:24.078955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2baa35bb30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2ba897fef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2baa21c200>]}
+[0m08:05:24.082653 [debug] [MainThread]: Flushing usage events
+[0m08:05:25.476550 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:10:34.649875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da3cb2788c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da3caca3950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da3caca38f0>]}
+
+
+============================== 08:10:34.687464 | 0221adde-8487-49b7-b140-e60262ff3e2f ==============================
+[0m08:10:34.687464 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m08:10:34.701154 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'warn_error': 'None', 'static_parser': 'True', 'log_path': '/opt/airflow/dbt/logs', 'printer_width': '80', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'profiles_dir': '/opt/airflow/dbt', 'fail_fast': 'False', 'introspect': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'target_path': 'None', 'write_json': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'version_check': 'True', 'empty': 'None', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt'}
+[0m08:10:34.754314 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m08:10:34.758669 [info ] [MainThread]: python version: 3.12.3
+[0m08:10:34.764639 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m08:10:34.769106 [info ] [MainThread]: os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m08:10:35.145803 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt
+[0m08:10:35.150227 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[0m08:10:35.154450 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m08:10:35.161664 [info ] [MainThread]: adapter type: postgres
+[0m08:10:35.165218 [info ] [MainThread]: adapter version: 1.10.0
+[0m08:10:35.733340 [info ] [MainThread]: Configuration:
+[0m08:10:35.738433 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:10:35.742970 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m08:10:35.747029 [info ] [MainThread]: Required dependencies:
+[0m08:10:35.751541 [debug] [MainThread]: Executing "git --help"
+[0m08:10:35.761065 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m08:10:35.766857 [info ] [MainThread]: Connection:
+[0m08:10:35.771980 [info ] [MainThread]:   host: postgres
+[0m08:10:35.782065 [info ] [MainThread]:   port: 5432
+[0m08:10:35.787417 [info ] [MainThread]:   user: pipeline_user
+[0m08:10:35.791990 [info ] [MainThread]:   database: crypto_db
+[0m08:10:35.797523 [info ] [MainThread]:   schema: public
+[0m08:10:35.801958 [info ] [MainThread]:   connect_timeout: 10
+[0m08:10:35.806707 [info ] [MainThread]:   role: None
+[0m08:10:35.813091 [info ] [MainThread]:   search_path: None
+[0m08:10:35.818980 [info ] [MainThread]:   keepalives_idle: 0
+[0m08:10:35.823546 [info ] [MainThread]:   sslmode: None
+[0m08:10:35.828850 [info ] [MainThread]:   sslcert: None
+[0m08:10:35.833479 [info ] [MainThread]:   sslkey: None
+[0m08:10:35.838631 [info ] [MainThread]:   sslrootcert: None
+[0m08:10:35.844598 [info ] [MainThread]:   application_name: dbt
+[0m08:10:35.849562 [info ] [MainThread]:   retries: 1
+[0m08:10:35.855634 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:10:36.245670 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m08:10:36.394246 [debug] [MainThread]: Using postgres connection "debug"
+[0m08:10:36.398477 [debug] [MainThread]: On debug: select 1 as id
+[0m08:10:36.402283 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:10:36.447116 [debug] [MainThread]: SQL status: SELECT 1 in 0.045 seconds
+[0m08:10:36.454857 [debug] [MainThread]: On debug: Close
+[0m08:10:36.460846 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:10:36.473599 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:10:36.480267 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m08:10:36.490300 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 2.175134, "process_in_blocks": "856", "process_kernel_time": 1.460118, "process_mem_max_rss": "115304", "process_out_blocks": "0", "process_user_time": 6.317742}
+[0m08:10:36.498315 [debug] [MainThread]: Command `dbt debug` failed at 08:10:36.497594 after 2.18 seconds
+[0m08:10:36.503306 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:10:36.507874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da3cb6c2690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da3cb83c9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7da3cacb79e0>]}
+[0m08:10:36.512212 [debug] [MainThread]: Flushing usage events
+[0m08:10:37.998561 [debug] [MainThread]: An error was encountered while trying to flush usage events

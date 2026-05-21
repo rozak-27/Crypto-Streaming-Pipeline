@@ -1,0 +1,74 @@
+[2026-05-21T07:50:14.498+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-21T07:50:14.687+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_hourly_pipeline.test_db_connection scheduled__2026-05-21T06:00:00+00:00 [queued]>
+[2026-05-21T07:50:14.723+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_hourly_pipeline.test_db_connection scheduled__2026-05-21T06:00:00+00:00 [queued]>
+[2026-05-21T07:50:14.725+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2026-05-21T07:50:14.789+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): test_db_connection> on 2026-05-21 06:00:00+00:00
+[2026-05-21T07:50:14.830+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_hourly_pipeline', 'test_db_connection', 'scheduled__2026-05-21T06:00:00+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/dbt_pipeline.py', '--cfg-path', '/tmp/tmp7lqcq95h']
+[2026-05-21T07:50:14.840+0000] {standard_task_runner.py:91} INFO - Job 99: Subtask test_db_connection
+[2026-05-21T07:50:14.842+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=236) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-21T07:50:14.846+0000] {standard_task_runner.py:63} INFO - Started process 237 to run task
+[2026-05-21T07:50:15.077+0000] {task_command.py:426} INFO - Running <TaskInstance: dbt_hourly_pipeline.test_db_connection scheduled__2026-05-21T06:00:00+00:00 [running]> on host 2030e1318c14
+[2026-05-21T07:50:15.353+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineer' AIRFLOW_CTX_DAG_ID='dbt_hourly_pipeline' AIRFLOW_CTX_TASK_ID='test_db_connection' AIRFLOW_CTX_EXECUTION_DATE='2026-05-21T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-21T06:00:00+00:00'
+[2026-05-21T07:50:15.356+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-21T07:50:15.393+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-21T07:50:15.397+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt && dbt debug --profiles-dir /opt/airflow/dbt']
+[2026-05-21T07:50:15.433+0000] {subprocess.py:86} INFO - Output:
+[2026-05-21T07:50:25.098+0000] {subprocess.py:93} INFO - [0m07:50:25  Running with dbt=1.12.0-b1
+[2026-05-21T07:50:25.262+0000] {subprocess.py:93} INFO - [0m07:50:25  dbt version: 1.12.0-b1
+[2026-05-21T07:50:25.268+0000] {subprocess.py:93} INFO - [0m07:50:25  python version: 3.12.3
+[2026-05-21T07:50:25.271+0000] {subprocess.py:93} INFO - [0m07:50:25  python path: /home/airflow/.local/bin/python
+[2026-05-21T07:50:25.289+0000] {subprocess.py:93} INFO - [0m07:50:25  os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2026-05-21T07:50:25.908+0000] {subprocess.py:93} INFO - [0m07:50:25  Using profiles dir at /opt/airflow/dbt
+[2026-05-21T07:50:25.912+0000] {subprocess.py:93} INFO - [0m07:50:25  Using profiles.yml file at /opt/airflow/dbt/profiles.yml
+[2026-05-21T07:50:25.920+0000] {subprocess.py:93} INFO - [0m07:50:25  Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[2026-05-21T07:50:25.926+0000] {subprocess.py:93} INFO - [0m07:50:25  adapter type: postgres
+[2026-05-21T07:50:25.941+0000] {subprocess.py:93} INFO - [0m07:50:25  adapter version: 1.10.0
+[2026-05-21T07:50:26.365+0000] {subprocess.py:93} INFO - [0m07:50:26  Configuration:
+[2026-05-21T07:50:26.369+0000] {subprocess.py:93} INFO - [0m07:50:26    profiles.yml file [[32mOK found and valid[0m]
+[2026-05-21T07:50:26.376+0000] {subprocess.py:93} INFO - [0m07:50:26    dbt_project.yml file [[32mOK found and valid[0m]
+[2026-05-21T07:50:26.380+0000] {subprocess.py:93} INFO - [0m07:50:26  Required dependencies:
+[2026-05-21T07:50:26.394+0000] {subprocess.py:93} INFO - [0m07:50:26   - git [[31mERROR[0m]
+[2026-05-21T07:50:26.398+0000] {subprocess.py:93} INFO - 
+[2026-05-21T07:50:26.402+0000] {subprocess.py:93} INFO - [0m07:50:26  Connection:
+[2026-05-21T07:50:26.409+0000] {subprocess.py:93} INFO - [0m07:50:26    host: postgres
+[2026-05-21T07:50:26.412+0000] {subprocess.py:93} INFO - [0m07:50:26    port: 5432
+[2026-05-21T07:50:26.417+0000] {subprocess.py:93} INFO - [0m07:50:26    user: pipeline_user
+[2026-05-21T07:50:26.422+0000] {subprocess.py:93} INFO - [0m07:50:26    database: crypto_db
+[2026-05-21T07:50:26.427+0000] {subprocess.py:93} INFO - [0m07:50:26    schema: public
+[2026-05-21T07:50:26.433+0000] {subprocess.py:93} INFO - [0m07:50:26    connect_timeout: 10
+[2026-05-21T07:50:26.439+0000] {subprocess.py:93} INFO - [0m07:50:26    role: None
+[2026-05-21T07:50:26.443+0000] {subprocess.py:93} INFO - [0m07:50:26    search_path: None
+[2026-05-21T07:50:26.446+0000] {subprocess.py:93} INFO - [0m07:50:26    keepalives_idle: 0
+[2026-05-21T07:50:26.453+0000] {subprocess.py:93} INFO - [0m07:50:26    sslmode: None
+[2026-05-21T07:50:26.458+0000] {subprocess.py:93} INFO - [0m07:50:26    sslcert: None
+[2026-05-21T07:50:26.463+0000] {subprocess.py:93} INFO - [0m07:50:26    sslkey: None
+[2026-05-21T07:50:26.466+0000] {subprocess.py:93} INFO - [0m07:50:26    sslrootcert: None
+[2026-05-21T07:50:26.471+0000] {subprocess.py:93} INFO - [0m07:50:26    application_name: dbt
+[2026-05-21T07:50:26.479+0000] {subprocess.py:93} INFO - [0m07:50:26    retries: 1
+[2026-05-21T07:50:26.488+0000] {subprocess.py:93} INFO - [0m07:50:26  Registered adapter: postgres=1.10.0
+[2026-05-21T07:50:27.016+0000] {subprocess.py:93} INFO - [0m07:50:27    Connection test: [[32mOK connection ok[0m]
+[2026-05-21T07:50:27.020+0000] {subprocess.py:93} INFO - 
+[2026-05-21T07:50:27.026+0000] {subprocess.py:93} INFO - [0m07:50:27  [31m1 check failed:[0m
+[2026-05-21T07:50:27.031+0000] {subprocess.py:93} INFO - [0m07:50:27  Error from git --help: User does not have permissions for this command: "git"
+[2026-05-21T07:50:27.033+0000] {subprocess.py:93} INFO - 
+[2026-05-21T07:50:29.406+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-21T07:50:29.409+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-21T07:50:29.470+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-21T07:50:29.487+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_hourly_pipeline, task_id=test_db_connection, run_id=scheduled__2026-05-21T06:00:00+00:00, execution_date=20260521T060000, start_date=20260521T075014, end_date=20260521T075029
+[2026-05-21T07:50:29.541+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 99 for task test_db_connection (Bash command failed. The command returned a non-zero exit code 1.; 237)
+[2026-05-21T07:50:29.586+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-21T07:50:29.676+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-21T07:50:29.681+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

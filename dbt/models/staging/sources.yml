@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: crypto
+    database: crypto_db
+    schema: public
+    tables:
+      - name: ohlcv_1min
+        description: "OHLCV 1-minute candles dari Spark Structured Streaming"
+        columns:
+          - name: time
+            description: "Timestamp awal candle (UTC)"
+            tests: [not_null]
+          - name: symbol
+            description: "Trading pair: BTC-USD, ETH-USD, dll"
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [BTC-USD, ETH-USD, BNB-USD, SOL-USD, ADA-USD]
+          - name: close
+            description: "Harga penutupan 1-minute candle"
+            tests: [not_null]

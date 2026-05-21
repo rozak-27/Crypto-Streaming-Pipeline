@@ -1,0 +1,44 @@
+[2026-05-18T13:45:04.699+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-18T13:45:05.361+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_quality_checks.check_freshness scheduled__2026-05-18T13:30:00+00:00 [queued]>
+[2026-05-18T13:45:05.420+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_quality_checks.check_freshness scheduled__2026-05-18T13:30:00+00:00 [queued]>
+[2026-05-18T13:45:05.423+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-05-18T13:45:05.539+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_freshness> on 2026-05-18 13:30:00+00:00
+[2026-05-18T13:45:05.573+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'data_quality_checks', 'check_freshness', 'scheduled__2026-05-18T13:30:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/data_quality.py', '--cfg-path', '/tmp/tmpftq96zt6']
+[2026-05-18T13:45:05.591+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=8750) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-18T13:45:05.592+0000] {standard_task_runner.py:91} INFO - Job 30: Subtask check_freshness
+[2026-05-18T13:45:05.594+0000] {standard_task_runner.py:63} INFO - Started process 8751 to run task
+[2026-05-18T13:45:06.029+0000] {task_command.py:426} INFO - Running <TaskInstance: data_quality_checks.check_freshness scheduled__2026-05-18T13:30:00+00:00 [running]> on host 42a8c6b849e0
+[2026-05-18T13:45:07.060+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='data_quality_checks' AIRFLOW_CTX_TASK_ID='check_freshness' AIRFLOW_CTX_EXECUTION_DATE='2026-05-18T13:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-18T13:30:00+00:00'
+[2026-05-18T13:45:07.064+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-18T13:45:07.384+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-18T13:45:07.402+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/data_quality.py", line 16, in check_data_freshness
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "ohlcv_1min" does not exist
+LINE 5:         FROM ohlcv_1min
+                     ^
+
+[2026-05-18T13:45:07.570+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=data_quality_checks, task_id=check_freshness, run_id=scheduled__2026-05-18T13:30:00+00:00, execution_date=20260518T133000, start_date=20260518T134505, end_date=20260518T134507
+[2026-05-18T13:45:07.665+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 30 for task check_freshness (relation "ohlcv_1min" does not exist
+LINE 5:         FROM ohlcv_1min
+                     ^
+; 8751)
+[2026-05-18T13:45:07.773+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-18T13:45:07.915+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-18T13:45:07.926+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
