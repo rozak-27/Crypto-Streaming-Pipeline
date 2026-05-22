@@ -36,12 +36,7 @@ This project streams live market data, processes it with Spark, stores it in Pos
 
 ## System Architecture
 
-<img width="1536" height="1024" alt="ChatGPT Image May 21, 2026, 09_23_03 PM" src="https://github.com/user-attachments/assets/b742da55-0477-4351-bbc5-b2934d343759" />
-
-
-
-
-
+<img width="1536" height="992" alt="Untitled" src="https://github.com/user-attachments/assets/d9c5642f-5111-4364-a7b4-b53bdd7a5aeb" />
 
 
 
